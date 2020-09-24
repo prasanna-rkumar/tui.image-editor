@@ -111,7 +111,7 @@ class Draw extends Submenu {
     _changeDrawType(event) {
         const button = event.target.closest('.tui-image-editor-button');
         if (button) {
-            const lineType = this.getButtonType(button, ['free', 'line']);
+            const lineType = this.getButtonType(button, ['free', 'line', 'dash']);
             this.actions.discardSelection();
 
             if (this.type === lineType) {

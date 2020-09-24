@@ -509,11 +509,14 @@ $selectLine.on('change', function() {
     var mode = $(this).val();
     var settings = getBrushSettings();
 
+    console.log(mode);
     imageEditor.stopDrawingMode();
     if (mode === 'freeDrawing') {
         imageEditor.startDrawingMode('FREE_DRAWING', settings);
-    } else {
+    } else if (mode === 'lineDrawing') {
         imageEditor.startDrawingMode('LINE_DRAWING', settings);
+    } else {
+        imageEditor.startDrawingMode('DASHED_LINE', settings);
     }
 });
 

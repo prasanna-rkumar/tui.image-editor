@@ -231,8 +231,10 @@ export default {
                 this.stopDrawingMode();
                 if (type === 'free') {
                     this.startDrawingMode('FREE_DRAWING', settings);
+                } else if (type === 'line') {
+                    this.startDrawingMode(/* 'LINE_DRAWING' */'DASHED_LINE', settings);
                 } else {
-                    this.startDrawingMode('LINE_DRAWING', settings);
+                    this.startDrawingMode('DASHED_LINE', settings);
                 }
             },
             setColor: color => {

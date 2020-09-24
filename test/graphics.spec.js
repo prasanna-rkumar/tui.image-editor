@@ -145,7 +145,7 @@ describe('Graphics', () => {
         expect(cropper.changeVisibility.calls.allArgs()).toEqual([[false], [true]]);
     });
 
-    it('can set brush setting into LINE_DRAWING, FREE_DRAWING', () => {
+    it('can set brush setting into', () => {
         graphics.startDrawingMode(drawingModes.LINE_DRAWING);
         graphics.setBrush({
             width: 12,

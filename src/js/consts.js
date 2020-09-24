@@ -45,6 +45,7 @@ export const componentNames = keyMirror(
     'ROTATION',
     'FREE_DRAWING',
     'LINE',
+    'DASHED_LINE',
     'TEXT',
     'ICON',
     'FILTER',
@@ -139,6 +140,7 @@ export const drawingModes = keyMirror(
     'CROPPER',
     'FREE_DRAWING',
     'LINE_DRAWING',
+    'DASHED_LINE',
     'TEXT',
     'SHAPE'
 );

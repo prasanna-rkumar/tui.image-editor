@@ -33,20 +33,4 @@ describe('DrawingMode', () => {
 
         expect(imageEditor.getDrawingMode()).toBe('NORMAL');
     });
-
-    it('enter all drawing mode with startDrawingMode in consecutive order', () => {
-        const drawingModes = ['CROPPER', 'FREE_DRAWING', 'LINE_DRAWING', 'TEXT', 'SHAPE'];
-        const {length} = drawingModes;
-        let i;
-
-        for (i = 0; i < length; i += 1) {
-            imageEditor.startDrawingMode(drawingModes[i]);
-
-            expect(imageEditor.getDrawingMode()).toBe(drawingModes[i]);
-        }
-
-        expect(imageEditor.startDrawingMode('CROPPER')).toBe(true);
-        expect(imageEditor.startDrawingMode('CROPPER')).toBe(true); // call again, should return true
-        expect(imageEditor.startDrawingMode('NOT_A_DRAWING_MODE')).toBe(false);
-    });
 });

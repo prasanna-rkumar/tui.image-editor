@@ -258,14 +258,6 @@ describe('Ui', () => {
             drawAction = actions.draw;
         });
 
-        it('startDrawingMode("FREE_DRAWING") API should be executed When the setDrawMode("free") action occurs', () => {
-            spyOn(imageEditorMock, 'startDrawingMode');
-            drawAction.setDrawMode('free');
-
-            expected = imageEditorMock.startDrawingMode.calls.mostRecent().args[0];
-            expect(expected).toBe('FREE_DRAWING');
-        });
-
         it('setBrush() API should be executed When the setColor() action occurs', () => {
             spyOn(imageEditorMock, 'setBrush');
             drawAction.setColor('#000000');
